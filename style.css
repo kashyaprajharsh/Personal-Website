@@ -1,0 +1,265 @@
+body {
+  color: #e4f9f5;
+  margin: 0;
+  text-align: center;
+  font-family: 'Merriweather', serif;
+}
+
+.header {
+  height: 95vh;
+  background-image: linear-gradient(to right bottom,
+ rgba(155, 205, 205, 0.801),
+  rgba(45, 151, 164, 0.991)),
+    url(images/hero.png);
+  background-size: cover;
+  background-position: top;
+  clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+}
+
+p {
+  line-height: 2;
+  color: #000000;
+}
+
+a {
+  color: #11999e;
+  font-family: 'Montserrat', sans-serif;
+  margin: 10px 20px;
+  text-decoration: none;
+}
+
+a:hover{
+  color: #eaf6f6;
+}
+
+hr {
+  border: dotted #c6fced 6px;
+  border-bottom: none;
+  width: 4%;
+  margin: 100px auto;
+}
+
+h1 {
+  margin: 50px auto 0 auto;
+  font-family: 'Sacramento', cursive;
+  display: block;
+  font-size: 5.625rem;
+  font-weight: 500;
+  letter-spacing: 10px;
+  animation: moveInleft;
+  animation-duration: 1s;
+  color: #045762;
+}
+
+.ani {
+  animation: moveInright 1s ease-out;
+  letter-spacing: 10.4px;
+  display: block;
+}
+.ani:visited,
+.ani:active,
+.ani::after,
+.ani:hover {
+  display: inline-block;
+  margin: 0 0.5rem;
+
+  animation: tada; /* referring directly to the animation's @keyframe declaration */
+  animation-duration: 1s; /* don't forget to set a duration! */
+}
+
+.hello:visited,
+.hello:active,
+.hello::after,
+.hello:hover{
+  display: flexbox;
+  margin: 0 0.5rem;
+
+  animation: wobble; /* referring directly to the animation's @keyframe declaration */
+  animation-duration: 5s;
+}
+h2 {
+  font-size: 2.5rem;
+  font-weight: normal;
+  color: #03506f;
+  padding-bottom: 10px;
+  font-family: 'Montserrat', sans-serif;
+}
+
+h3 {
+  color: #11999e;
+  font-family: 'Montserrat', sans-serif;
+}
+.topright{
+    position: absolute;
+    right: 0;
+    top: 0;
+    display: block;
+    height: 150px;
+    width: 150px;
+    margin: 0 auto 0 auto;
+    text-decoration: none;
+  }
+
+.dp {
+  border-radius: 80%;
+}
+
+.code-img {
+  border-radius: 80%;
+  width: 25%;
+  float: left;
+  margin-right: 30px;
+}
+
+.cp-img {
+  border-radius: 80%;
+  width: 25%;
+  float: right;
+  margin-left: 20px;
+}
+
+.hob-img {
+  width: 25%;
+  float: left;
+  margin-right: 20px;
+}
+
+.top_container {
+  position: relative;
+  padding-top: 10px;
+}
+
+.middle-container {
+  margin: 100px 0;
+  padding-top: 0px;
+}
+
+.bottom-container {
+  background-color: #66bfbf;
+  padding: 50px 0 20px;
+}
+
+.skill-row {
+  width: 50%;
+  margin: 100px auto 100px auto;
+  text-align: left;
+}
+
+.intro {
+  width: 30%;
+  margin: auto;
+}
+
+.contact-message {
+  width: 40%;
+  margin: 40px auto 60px;
+}
+
+.copyright {
+  color: #eaf6f6;
+  font-size: 0.75rem;
+  padding: 20px 0;
+}
+
+@keyframes moveInleft {
+  0% {
+    opacity: 0;
+    transform: translateX(-100px);
+  }
+
+  80% {
+    transform: translateX(10px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
+}
+
+@keyframes moveInright {
+  0% {
+    opacity: 0;
+    transform: translateX(100px);
+  }
+
+  80% {
+    transform: translateX(-10px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
+}
+
+@keyframes moveInBottom {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
+}
+
+.btn:link,
+.btn:visited {
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #222831;
+  font-family: 'Montserrat', sans-serif;
+  padding: 10px 10px;
+  display: inline-block;
+  border-radius: 100px;
+  transition: all .2s;
+  position: relative;
+}
+
+.btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, .2);
+  background: #11cdd4;
+}
+
+.btn:active {
+  transform: translateY(-1px);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, .2);
+}
+
+.btn-white {
+  background-color: #11cdd4;
+  color: #d0e8f2;
+}
+
+.btn::after {
+  content: "";
+  background: #11CDD4;
+  color: #222831;
+  display: inline-block;
+  height: 100%;
+  width: 100%;
+  border-radius: 100px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  transition: all .4s;
+}
+
+.btn-white::after {
+  background-color: #11cdd4;
+}
+
+.btn:hover::after {
+  transform: scaleX(1.4) scaleY(1.6);
+  opacity: 0;
+  background: #d0e8f2;
+}
+
+.btn-animated {
+  animation: moveInBottom .5s ease-out .75s;
+  animation-fill-mode: backwards;
+}
