@@ -19,6 +19,7 @@ body {
 p {
   line-height: 2;
   color: #000000;
+  font-family: 'Merriweather', serif;
 }
 
 a {
@@ -68,7 +69,6 @@ h1 {
 }
 
 .hello:visited,
-.hello:active,
 .hello::after,
 .hello:hover{
   display: flexbox;
@@ -119,6 +119,7 @@ h3 {
 }
 
 .hob-img {
+  border-radius: 80%;
   width: 25%;
   float: left;
   margin-right: 20px;
@@ -147,7 +148,7 @@ h3 {
 
 .intro {
   width: 30%;
-  margin: auto;
+  margin: 100px auto;
 }
 
 .contact-message {
